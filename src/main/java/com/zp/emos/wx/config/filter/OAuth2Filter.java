@@ -2,7 +2,6 @@ package com.zp.emos.wx.config.filter;
 
 import cn.hutool.core.util.StrUtil;
 import com.auth0.jwt.exceptions.JWTDecodeException;
-import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.zp.emos.wx.config.shiro.JwtUtil;
 import com.zp.emos.wx.config.shiro.OAuth2Token;
@@ -61,6 +60,7 @@ public class OAuth2Filter extends AuthenticatingFilter {
 
     /**
      * 拦截请求,判断请求是否需要被shiro处理
+     * options请求直接放行
      * @param request
      * @param response
      * @param mappedValue

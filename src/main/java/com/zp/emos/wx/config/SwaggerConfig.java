@@ -21,6 +21,7 @@ import java.util.List;
 
 /**
  * https://blog.csdn.net/zwj1030711290/article/details/117235438
+ * http://localhost:8080/emos-wx-api/swagger-ui/index.html
  */
 @Configuration
 @EnableOpenApi
