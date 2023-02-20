@@ -1,6 +1,6 @@
 package com.zp.emos.wx.dao;
 
-import com.zp.emos.wx.pojo.entity.TbMeeting;
+import com.zp.emos.wx.pojo.TbMeeting;
 
 public interface TbMeetingDao {
     int deleteByPrimaryKey(Long id);

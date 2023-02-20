@@ -1,23 +1,24 @@
-package com.zp.emos.wx.pojo.entity;
+package com.zp.emos.wx.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 import lombok.Data;
 
 /**
- * tb_dept
+ * tb_workday
  * @author 
  */
 @Data
-public class TbDept implements Serializable {
+public class TbWorkday implements Serializable {
     /**
      * 主键
      */
     private Integer id;
 
     /**
-     * 部门名称
+     * 日期
      */
-    private String deptName;
+    private Date date;
 
     private static final long serialVersionUID = 1L;
 }

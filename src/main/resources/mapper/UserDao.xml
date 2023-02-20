@@ -8,7 +8,7 @@
         where root = 1
     </select>
 
-    <insert id="insert" parameterType="com.zp.emos.wx.pojo.entity.UserEntity">
+    <insert id="insert" parameterType="com.zp.emos.wx.pojo.UserEntity">
         insert into tb_user set
         <if test="user.openId!=null">
             open_id=#{user.openId},
@@ -43,5 +43,14 @@
     </insert>
     <select id="searchIdByOpenId" parameterType="string" resultType="integer">
         select id from tb_user where open_id=#{openId} and status=1
+    </select>
+
+    <select id="searchUserPermissions" parameterType="int" resultType="string">
+        select  p.permission_name
+        from tb_user u
+                 left join tb_role r on json_contains(u.role, cast(r.id as char))
+                 left join tb_permission p on json_contains(r.permissions, cast(p.id as char))
+        where u.id = #{userId}
+          and u.status = 1
     </select>
 </mapper>

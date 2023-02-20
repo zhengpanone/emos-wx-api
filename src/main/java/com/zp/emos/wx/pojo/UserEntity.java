@@ -1,4 +1,4 @@
-package com.zp.emos.wx.pojo.entity;
+package com.zp.emos.wx.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -72,9 +72,9 @@ public class UserEntity implements Serializable {
     private Integer deptId;
 
     /**
-     * 状态
+     * 状态 1：在职，0：离职
      */
-    private Boolean status;
+    private Integer status;
 
     /**
      * 创建时间

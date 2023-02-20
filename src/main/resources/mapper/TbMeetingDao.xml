@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zp.emos.wx.dao.TbMeetingDao">
-  <resultMap id="BaseResultMap" type="com.zp.emos.wx.pojo.entity.TbMeeting">
+  <resultMap id="BaseResultMap" type="com.zp.emos.wx.pojo.TbMeeting">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="uuid" jdbcType="VARCHAR" property="uuid" />
     <result column="title" jdbcType="VARCHAR" property="title" />
@@ -31,7 +31,7 @@
     delete from tb_meeting
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.zp.emos.wx.pojo.entity.TbMeeting" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.zp.emos.wx.pojo.TbMeeting" useGeneratedKeys="true">
     insert into tb_meeting (uuid, title, creator_id, 
       `date`, place, `start`, `end`, 
       `type`, members, `desc`, 
@@ -43,7 +43,7 @@
       #{instanceId,jdbcType=VARCHAR}, #{status,jdbcType=SMALLINT}, #{createTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.zp.emos.wx.pojo.entity.TbMeeting" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.zp.emos.wx.pojo.TbMeeting" useGeneratedKeys="true">
     insert into tb_meeting
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="uuid != null">
@@ -128,7 +128,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.zp.emos.wx.pojo.entity.TbMeeting">
+  <update id="updateByPrimaryKeySelective" parameterType="com.zp.emos.wx.pojo.TbMeeting">
     update tb_meeting
     <set>
       <if test="uuid != null">
@@ -173,7 +173,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.zp.emos.wx.pojo.entity.TbMeeting">
+  <update id="updateByPrimaryKey" parameterType="com.zp.emos.wx.pojo.TbMeeting">
     update tb_meeting
     set uuid = #{uuid,jdbcType=VARCHAR},
       title = #{title,jdbcType=VARCHAR},

@@ -1,4 +1,4 @@
-package com.zp.emos.wx.pojo.form;
+package com.zp.emos.wx.controller.form;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

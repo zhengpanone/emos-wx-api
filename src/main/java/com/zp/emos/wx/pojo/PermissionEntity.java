@@ -1,4 +1,4 @@
-package com.zp.emos.wx.pojo.entity;
+package com.zp.emos.wx.pojo;
 
 import java.io.Serializable;
 import lombok.Data;
@@ -8,7 +8,8 @@ import lombok.Data;
  * @author 
  */
 @Data
-public class TbPermission implements Serializable {
+public class PermissionEntity implements Serializable {
+    private static final long serialVersionUID = 1L;
     /**
      * 主键
      */
@@ -29,5 +30,5 @@ public class TbPermission implements Serializable {
      */
     private Integer actionId;
 
-    private static final long serialVersionUID = 1L;
+
 }

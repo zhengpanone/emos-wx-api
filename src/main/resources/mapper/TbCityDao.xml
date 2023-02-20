@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zp.emos.wx.dao.TbCityDao">
-  <resultMap id="BaseResultMap" type="com.zp.emos.wx.pojo.entity.TbCity">
+  <resultMap id="BaseResultMap" type="com.zp.emos.wx.pojo.TbCity">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="city" jdbcType="VARCHAR" property="city" />
     <result column="code" jdbcType="VARCHAR" property="code" />
@@ -19,11 +19,11 @@
     delete from tb_city
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.zp.emos.wx.pojo.entity.TbCity" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.zp.emos.wx.pojo.TbCity" useGeneratedKeys="true">
     insert into tb_city (city, code)
     values (#{city,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.zp.emos.wx.pojo.entity.TbCity" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.zp.emos.wx.pojo.TbCity" useGeneratedKeys="true">
     insert into tb_city
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="city != null">
@@ -42,7 +42,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.zp.emos.wx.pojo.entity.TbCity">
+  <update id="updateByPrimaryKeySelective" parameterType="com.zp.emos.wx.pojo.TbCity">
     update tb_city
     <set>
       <if test="city != null">
@@ -54,7 +54,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.zp.emos.wx.pojo.entity.TbCity">
+  <update id="updateByPrimaryKey" parameterType="com.zp.emos.wx.pojo.TbCity">
     update tb_city
     set city = #{city,jdbcType=VARCHAR},
       code = #{code,jdbcType=VARCHAR}
