@@ -1,4 +1,4 @@
-package com.zp.emos.wx.pojo;
+package com.zp.emos.wx.pojo.entity;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -9,7 +9,8 @@ import lombok.Data;
  * @author 
  */
 @Data
-public class TbUser implements Serializable {
+public class UserEntity implements Serializable {
+    private static final long serialVersionUID = 1L;
     /**
      * 主键
      */
@@ -38,7 +39,7 @@ public class TbUser implements Serializable {
     /**
      * 性别
      */
-    private Object sex;
+    private String sex;
 
     /**
      * 手机号码
@@ -53,12 +54,12 @@ public class TbUser implements Serializable {
     /**
      * 入职日期
      */
-    private Date hiredate;
+    private Date hireDate;
 
     /**
      * 角色
      */
-    private Object role;
+    private String role;
 
     /**
      * 是否是超级管理员
@@ -73,12 +74,14 @@ public class TbUser implements Serializable {
     /**
      * 状态
      */
-    private Byte status;
+    private Boolean status;
 
     /**
      * 创建时间
      */
     private Date createTime;
-
-    private static final long serialVersionUID = 1L;
+    /**
+     * 部门名称
+     */
+    private String deptName;
 }

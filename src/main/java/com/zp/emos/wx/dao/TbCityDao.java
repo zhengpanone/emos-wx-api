@@ -1,6 +1,6 @@
 package com.zp.emos.wx.dao;
 
-import com.zp.emos.wx.pojo.TbCity;
+import com.zp.emos.wx.pojo.entity.TbCity;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

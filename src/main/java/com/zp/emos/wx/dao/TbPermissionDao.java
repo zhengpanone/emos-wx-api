@@ -1,6 +1,6 @@
 package com.zp.emos.wx.dao;
 
-import com.zp.emos.wx.pojo.TbPermission;
+import com.zp.emos.wx.pojo.entity.TbPermission;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

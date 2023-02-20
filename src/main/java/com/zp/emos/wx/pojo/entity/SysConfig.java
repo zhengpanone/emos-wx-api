@@ -1,4 +1,4 @@
-package com.zp.emos.wx.pojo;
+package com.zp.emos.wx.pojo.entity;
 
 import java.io.Serializable;
 import lombok.Data;

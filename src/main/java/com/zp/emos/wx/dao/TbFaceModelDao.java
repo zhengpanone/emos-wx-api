@@ -1,6 +1,6 @@
 package com.zp.emos.wx.dao;
 
-import com.zp.emos.wx.pojo.TbFaceModel;
+import com.zp.emos.wx.pojo.entity.TbFaceModel;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
