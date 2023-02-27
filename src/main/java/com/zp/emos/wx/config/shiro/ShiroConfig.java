@@ -1,6 +1,5 @@
 package com.zp.emos.wx.config.shiro;
 
-import com.zp.emos.wx.config.filter.OAuth2Filter;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.mgt.SessionsSecurityManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;

@@ -13,7 +13,7 @@ public interface UserDao {
     boolean haveRootUser();
 
     int insert(@Param("user") UserEntity user);
-    int searchIdByOpenId(String openId);
+    Integer searchIdByOpenId(String openId);
 
     /**
      * 查询用户权限

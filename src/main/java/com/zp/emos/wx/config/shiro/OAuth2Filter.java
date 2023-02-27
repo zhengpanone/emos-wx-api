@@ -1,4 +1,4 @@
-package com.zp.emos.wx.config.filter;
+package com.zp.emos.wx.config.shiro;
 
 import cn.hutool.core.util.StrUtil;
 import com.auth0.jwt.exceptions.JWTDecodeException;

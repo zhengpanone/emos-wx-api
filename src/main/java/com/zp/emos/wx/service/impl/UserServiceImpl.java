@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
         JSONObject json = JSONUtil.parseObj(response);
         String openid = json.getStr("openid");
         if (StrUtil.isBlank(openid)) {
-            throw new RuntimeException("临时登录凭证错误");
+            throw new EmosException("临时登录凭证错误");
         }
         return openid;
     }
@@ -54,6 +54,17 @@ public class UserServiceImpl implements UserService {
     public Set<String> searchUserPermissions(int userId) {
         Set<String> permissions = userDao.searchUserPermissions(userId);
         return permissions;
+    }
+
+    @Override
+    public Integer login(String code) {
+        String openId = getOpenId(code);
+        Integer id = userDao.searchIdByOpenId(openId);
+        if (id == null) {
+            throw new EmosException("账户不存在");
+        }
+        // TODO 从消息队列中接收消息,转移到消息表
+        return id;
     }
 
     @Override

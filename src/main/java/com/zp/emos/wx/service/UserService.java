@@ -17,4 +17,6 @@ public interface UserService {
      * @return
      */
     Set<String> searchUserPermissions(int userId);
+
+    Integer login(String code);
 }
