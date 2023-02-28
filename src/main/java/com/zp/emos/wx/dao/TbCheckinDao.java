@@ -3,17 +3,12 @@ package com.zp.emos.wx.dao;
 import com.zp.emos.wx.pojo.TbCheckin;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.Date;
+import java.util.Map;
+
 @Mapper
 public interface TbCheckinDao {
-    int deleteByPrimaryKey(Integer id);
+    Integer haveCheckin(Map<String, Object> data);
 
-    int insert(TbCheckin record);
 
-    int insertSelective(TbCheckin record);
-
-    TbCheckin selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(TbCheckin record);
-
-    int updateByPrimaryKey(TbCheckin record);
 }

@@ -21,4 +21,11 @@ public interface UserDao {
      * @return
      */
     Set<String> searchUserPermissions(@Param("userId") int userId);
+
+    /**
+     * 根据用户ID查询用户
+     * @param userId
+     * @return
+     */
+    UserEntity searchById(@Param("userId")int userId);
 }

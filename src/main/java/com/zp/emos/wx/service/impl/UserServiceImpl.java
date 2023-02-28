@@ -68,6 +68,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public UserEntity searchById(int userId) {
+        return userDao.searchById(userId);
+    }
+
+    @Override
     public int registerUser(RegisterForm registerForm) {
         Integer userId = null;
         String registerCode = registerForm.getRegisterCode();

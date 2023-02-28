@@ -53,4 +53,7 @@
         where u.id = #{userId}
           and u.status = 1
     </select>
+    <select id="searchById" parameterType="int" resultType="com.zp.emos.wx.pojo.UserEntity">
+        select id,open_id,nickname,photo,name,sex,tel,role,root,dept_id,status, create_time from tb_user where id = #{userId} and status = 1
+    </select>
 </mapper>

@@ -1,6 +1,7 @@
 package com.zp.emos.wx.service;
 
 import com.zp.emos.wx.controller.form.RegisterForm;
+import com.zp.emos.wx.pojo.UserEntity;
 
 import java.util.Set;
 
@@ -19,4 +20,6 @@ public interface UserService {
     Set<String> searchUserPermissions(int userId);
 
     Integer login(String code);
+
+    UserEntity searchById(int userId);
 }
