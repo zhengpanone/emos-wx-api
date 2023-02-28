@@ -110,7 +110,7 @@ public class OAuth2Filter extends AuthenticatingFilter {
                 resp.getWriter().print("token 令牌已过期");
                 return false;
             }
-        }catch (JWTDecodeException e){
+        }catch (Exception e){
             resp.setStatus(HttpStatus.SC_UNAUTHORIZED);
             resp.getWriter().print("token 令牌无效");
             return false;
