@@ -5,15 +5,9 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface TbFaceModelDao {
-    int deleteByPrimaryKey(Integer id);
+    String searchFaceModel(int userId);
+    void insert(TbFaceModel tbFaceModel);
 
-    int insert(TbFaceModel record);
+    int deleteFaceModel(int userId);
 
-    int insertSelective(TbFaceModel record);
-
-    TbFaceModel selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(TbFaceModel record);
-
-    int updateByPrimaryKey(TbFaceModel record);
 }

@@ -10,5 +10,7 @@ import java.util.Map;
 public interface TbCheckinDao {
     Integer haveCheckin(Map<String, Object> data);
 
+    void insert(TbCheckin checkin);
+
 
 }

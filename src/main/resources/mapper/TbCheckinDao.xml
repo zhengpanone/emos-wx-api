@@ -24,5 +24,30 @@
         limit 1
     </select>
 
+    <insert id="insert" parameterType="com.zp.emos.wx.pojo.TbCheckin">
+        INSERT INTO tb_checkin SET user_id = #{userId},
+        <if test="address!=null">
+            address = #{address},
+        </if>
+        <if test="country!=null">
+            country = #{country},
+        </if>
+        <if test="province!=null">
+            province = #{province},
+        </if>
+        <if test="city!=null">
+            city = #{city},
+        </if>
+        <if test="district!=null">
+            district = #{district},
+        </if>
+        <if test="risk!=null">
+            risk = #{risk},
+        </if>
+        status = #{status},
+        date = #{dae},create_time = #{createTime}
+
+    </insert>
+
 
 </mapper>
